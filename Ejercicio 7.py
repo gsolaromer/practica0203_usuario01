@@ -1,8 +1,9 @@
-# Crear una lista con el abecedario
-abecedario = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+abc = [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
-# Eliminar las letras que ocupan posiciones múltiplos de 3
-abecedario_filtrado = [letra for i, letra in enumerate(abecedario) if (i + 1) % 3 != 0]
+print(len(abc))
 
-# Mostrar la lista resultante
-print(abecedario_filtrado)
+for i in range(len(abc), 0, -1):
+    if i % 3==0:
+        abc.pop(i-1)
+    
+print(abc)

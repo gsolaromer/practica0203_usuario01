@@ -1,19 +1,9 @@
-# Definir la lista de asignaturas
-asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+materias = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+calificaciones=[]
+for i in materias:
+    cal = float(input("Cuando sacaste en "+ i + ":\n"))
+    calificaciones.append(cal)
 
-# Crear una lista para almacenar las asignaturas a repetir
-asignaturas_a_repetir = []
-
-# Preguntar al usuario por la nota de cada asignatura y eliminar las aprobadas
-for asignatura in asignaturas:
-    nota = float(input(f"Ingresa la nota de {asignatura}: "))
-    if nota < 5.0:
-        asignaturas_a_repetir.append(asignatura)
-
-# Mostrar las asignaturas a repetir
-if asignaturas_a_repetir:
-    print("Debes repetir las siguientes asignaturas:")
-    for asignatura in asignaturas_a_repetir:
-        print(asignatura)
-else:
-    print("¡Felicidades! Has aprobado todas las asignaturas.")
+for j in range(5):
+    if calificaciones[j]<5:
+        print("Tienes que repetir la materia de "+ materias[j])

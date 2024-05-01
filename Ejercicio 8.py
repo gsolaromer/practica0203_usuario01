@@ -1,17 +1,12 @@
-# Pedimos al usuario que ingrese una palabra
-palabra_usuario = input("Ingresa una palabra: ")
+palabra = input("Escribe una palabra:\n")
 
-# Convertimos la palabra a minúsculas para hacer la comparación sin distinción entre mayúsculas y minúsculas
-palabra_usuario = palabra_usuario.lower()
+palabra_reves = palabra
 
-# Convertimos la palabra en una lista de caracteres
-lista_caracteres = list(palabra_usuario)
+palabra = list(palabra)
+palabra_reves = list(palabra_reves)
+palabra_reves.reverse()
 
-# Creamos una tupla con la reversa de la lista de caracteres
-tupla_reversa = tuple(reversed(lista_caracteres))
-
-# Comparamos la palabra original con la versión invertida
-if lista_caracteres == list(tupla_reversa):
-    print(f"{palabra_usuario} es un palíndromo.")
+if palabra == palabra_reves:
+    print("ES UN PALINDROMO")
 else:
-    print(f"{palabra_usuario} no es un palíndromo.")
+    print("NO ES UN PALINDROMO")

@@ -1,17 +1,9 @@
-# Pide al usuario que ingrese los números ganadores de la lotería primitiva uno por uno
-print("Introduce los números ganadores de la lotería primitiva (introduce '0' para finalizar):")
-numeros_ganadores = []
+premio = []
 
-while True:
-    numero = int(input("Número ganador (introduce 0 para finalizar): "))
-    if numero == 0:
-        break
-    numeros_ganadores.append(numero)
+for i in range(6):
+    ganador = int(input("Escribe el numero ganador:\n"))
+    premio.append(ganador)
 
-# Ordena la lista de números ganadores de menor a mayor
-numeros_ganadores.sort()
+premio.sort()
 
-# Muestra los números ganadores ordenados
-print("Números ganadores ordenados de menor a mayor:")
-for numero in numeros_ganadores:
-    print(numero)
+print("Los numeros ganadores son:\n" + str(premio))

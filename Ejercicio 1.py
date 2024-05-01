@@ -1,7 +1,6 @@
-# Crear una lista de asignaturas
-asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+materias= ["Matematicas", "Física", "Química", "Historia", "Lengua"]
 
-# Mostrar las asignaturas por pantalla
-print("Asignaturas del curso:")
-for asignatura in asignaturas:
-    print(asignatura)
+for i in materias:
+    print(i)
+
+print("FIN")

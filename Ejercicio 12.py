@@ -1,18 +1,23 @@
-# Pedir al usuario una muestra de números separados por comas
-entrada_usuario = input("Ingrese una muestra de números separados por comas: ")
+import math
+vecMuestras = []
+total=0
+muestras = int(input("Cuantas muestras vas a introducir\n"))
+varianza = 0
+x=0
+for i in range(muestras):
+    muestra = float(input("Cual es la muestra " + str(i+1) + "?\n"))
+    vecMuestras.append(muestra)
 
-# Convertir la entrada del usuario en una lista de números
-numeros = [float(numero) for numero in entrada_usuario.split(',')]
+for j in vecMuestras:
+    total += j
 
-# Calcular la media
-media = sum(numeros) / len(numeros)
+media = total/len(vecMuestras)
 
-# Calcular la suma de los cuadrados de las diferencias respecto a la media
-suma_cuadrados_diferencias = sum((numero - media) ** 2 for numero in numeros)
+for k in vecMuestras:
+    x += (k-media)**2
 
-# Calcular la desviación típica
-desviacion_tipica = (suma_cuadrados_diferencias / len(numeros)) ** 0.5
+varianza = x/(len(vecMuestras)-1)
 
-# Mostrar los resultados por pantalla
-print(f"La media de la muestra es: {media}")
-print(f"La desviación típica de la muestra es: {desviacion_tipica}")
+desviacion = round(math.sqrt(varianza),2)
+
+print("La media es: " + str(media) + " y la desviacion es: " + str(desviacion))
